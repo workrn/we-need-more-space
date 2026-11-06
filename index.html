@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Need More Space 🪐 | Personal Link Vault</title>
   
-  <!-- Font Quicksand & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -39,10 +35,8 @@
       --text-muted: #6b7280;
       --accent: #5e7153;
       --accent-subtle: #edf3e8;
-      --accent-text: #374630;
       --badge-bg: #efece4;
     }
-
     :root[data-theme="sage"] {
       --bg-main: #f4f7f4;
       --bg-card: #ffffff;
@@ -52,10 +46,8 @@
       --text-muted: #5e6f60;
       --accent: #48694c;
       --accent-subtle: #e3ede3;
-      --accent-text: #2c442e;
       --badge-bg: #e6eee6;
     }
-
     :root[data-theme="lavender"] {
       --bg-main: #f7f6f9;
       --bg-card: #ffffff;
@@ -65,10 +57,8 @@
       --text-muted: #6b6377;
       --accent: #6c5a8a;
       --accent-subtle: #f0ebf8;
-      --accent-text: #483961;
       --badge-bg: #eeeaf5;
     }
-
     :root[data-theme="latte"] {
       --bg-main: #f9f7f4;
       --bg-card: #ffffff;
@@ -78,10 +68,8 @@
       --text-muted: #74685a;
       --accent: #7c6246;
       --accent-subtle: #f5ece2;
-      --accent-text: #4f3d29;
       --badge-bg: #efe9e0;
     }
-
     :root[data-theme="dark"] {
       --bg-main: #181b1e;
       --bg-card: #22262b;
@@ -91,7 +79,6 @@
       --text-muted: #9aa2ad;
       --accent: #86a77d;
       --accent-subtle: #273525;
-      --accent-text: #c0dbc4;
       --badge-bg: #2d333a;
     }
 
@@ -100,17 +87,14 @@
       color: var(--text-main);
       transition: background-color 0.2s ease, color 0.2s ease;
     }
-
     .theme-card {
       background-color: var(--bg-card);
       border-color: var(--border-subtle);
     }
-
     .theme-subtle {
       background-color: var(--bg-subtle);
       border-color: var(--border-subtle);
     }
-
     .theme-accent-btn {
       background-color: var(--accent);
       color: #ffffff;
@@ -118,48 +102,31 @@
     .theme-accent-btn:hover {
       filter: brightness(0.92);
     }
-
     .theme-badge {
       background-color: var(--badge-bg);
       color: var(--text-muted);
     }
-
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-subtle);
-      border-radius: 9999px;
-    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col font-sans transition-colors duration-200">
+<body class="min-h-screen flex flex-col font-sans">
 
   <!-- Header Navigation -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-opacity-90 border-b theme-card">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-15 flex items-center justify-between gap-3">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
       
-      <!-- Brand Logo -->
       <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-lg shadow-xs border border-stone-200/50" style="background-color: var(--accent-subtle);">
+        <div class="w-8 h-8 rounded-xl flex items-center justify-center text-base shadow-xs border border-stone-200/50" style="background-color: var(--accent-subtle);">
           🪐
         </div>
         <div>
-          <h1 class="font-display font-bold text-base sm:text-lg tracking-tight leading-tight flex items-center gap-1.5">
+          <h1 class="font-display font-bold text-sm sm:text-base tracking-tight leading-tight">
             We Need More Space
           </h1>
-          <p class="text-[10px] sm:text-[11px] text-stone-500 font-sans leading-none">cozy corner for your links 🍃</p>
+          <p class="text-[10px] text-stone-500 leading-none">cozy corner for your links 🍃</p>
         </div>
       </div>
 
-      <!-- Controls: Theme, View Switcher & Auth -->
       <div class="flex items-center gap-2">
-        
-        <!-- Theme Dropdown -->
         <div class="relative">
           <select id="themeSelector" class="text-xs font-medium rounded-xl px-2.5 py-1.5 border appearance-none pr-7 cursor-pointer theme-subtle focus:outline-none">
             <option value="linen">🌾 Linen</option>
@@ -171,9 +138,8 @@
           <i data-lucide="palette" class="w-3.5 h-3.5 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none opacity-60"></i>
         </div>
 
-        <!-- Auth UI -->
         <div id="authContainer" class="flex items-center">
-          <button id="btnLogin" class="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-xl border border-stone-300 shadow-xs hover:bg-stone-50 transition-colors bg-white text-stone-800">
+          <button id="btnLogin" class="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-xl border border-stone-300 shadow-xs hover:bg-stone-50 transition-colors bg-white text-stone-800">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -190,16 +156,15 @@
             </button>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
   <!-- Main Body -->
-  <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-5 space-y-4">
+  <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-4 space-y-3.5">
 
     <!-- Status Bar -->
-    <div id="syncBanner" class="py-2 px-3 rounded-xl border text-xs flex items-center justify-between gap-2 theme-card">
+    <div id="syncBanner" class="py-1.5 px-3 rounded-xl border text-xs flex items-center justify-between gap-2 theme-card">
       <div class="flex items-center gap-2">
         <span id="syncDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
         <span id="syncText" class="text-stone-600 dark:text-stone-300">Penyimpanan: Browser Lokal</span>
@@ -211,19 +176,14 @@
       </div>
     </div>
 
-    <!-- Toolbar: Search, Filters, View Layout Toggle, Add Link -->
+    <!-- Toolbar -->
     <div class="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between">
-      
-      <!-- Search Input -->
       <div class="relative flex-1">
         <i data-lucide="search" class="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400"></i>
         <input type="text" id="searchInput" placeholder="Cari judul, tag, link..." class="w-full text-xs pl-8 pr-3 py-2 rounded-xl border theme-card focus:outline-none">
       </div>
 
-      <!-- Filters & Layout Switcher -->
       <div class="flex items-center gap-1.5 flex-wrap">
-        
-        <!-- Category Filter -->
         <select id="categoryFilter" class="text-xs py-2 px-2.5 rounded-xl border theme-card focus:outline-none cursor-pointer">
           <option value="ALL">Semua 📂</option>
           <option value="Kerja">💼 Kerja</option>
@@ -234,12 +194,10 @@
           <option value="Lainnya">📎 Lainnya</option>
         </select>
 
-        <!-- Toggle Star Favorites -->
         <button id="filterFavBtn" title="Hanya Favorit" class="p-2 text-xs rounded-xl border theme-card hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
           <i data-lucide="star" class="w-4 h-4 text-amber-500"></i>
         </button>
 
-        <!-- View Switcher (Grid vs List) -->
         <div class="flex items-center rounded-xl border theme-card p-0.5">
           <button id="viewGridBtn" title="Tampilan Kotak (Grid)" class="p-1.5 rounded-lg transition-colors bg-stone-200/70 dark:bg-stone-700 text-stone-800 dark:text-stone-100">
             <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
@@ -249,28 +207,24 @@
           </button>
         </div>
 
-        <!-- Add Link Button -->
         <button id="btnOpenModal" class="flex items-center gap-1 text-xs font-semibold px-3 py-2 rounded-xl shadow-xs theme-accent-btn transition-transform active:scale-95 ml-auto sm:ml-0">
           <i data-lucide="plus" class="w-3.5 h-3.5"></i>
           <span>Simpan Link</span>
         </button>
-
       </div>
-
     </div>
 
     <!-- Empty State -->
-    <div id="emptyState" class="hidden text-center py-12 px-4">
+    <div id="emptyState" class="hidden text-center py-10 px-4">
       <div class="w-12 h-12 mx-auto mb-2 rounded-2xl flex items-center justify-center text-2xl theme-subtle">
         📭
       </div>
       <h3 class="font-display font-bold text-sm text-stone-700 dark:text-stone-200">Belum ada link di sini</h3>
-      <p class="text-[11px] text-stone-500 mt-0.5">Klik tombol <strong>"Simpan Link"</strong> untuk menaruh bookmark favoritmu!</p>
+      <p class="text-[11px] text-stone-500 mt-0.5">Klik tombol <strong>"Simpan Link"</strong> untuk menaruh link favoritmu!</p>
     </div>
 
-    <!-- Links Container -->
+    <!-- Links Grid / List Container -->
     <div id="linksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
-      <!-- Cards / Rows are rendered dynamically here -->
     </div>
 
   </main>
@@ -338,13 +292,13 @@
     </div>
   </div>
 
-  <!-- Toast Notification -->
+  <!-- Toast -->
   <div id="toast" class="fixed bottom-4 right-4 z-50 transform translate-y-16 opacity-0 transition-all duration-200 pointer-events-none px-3 py-2 rounded-xl theme-card border shadow-md text-xs font-medium flex items-center gap-1.5">
     <span id="toastIcon">✨</span>
     <span id="toastMsg">Berhasil!</span>
   </div>
 
-  <!-- Firebase Scripts -->
+  <!-- Scripts -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
@@ -359,20 +313,54 @@
       appId: "1:645398768628:web:080b1dc382411f8ca2a7a1"
     };
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const provider = new GoogleAuthProvider();
+    let app, auth, db, provider;
+    try {
+      app = initializeApp(firebaseConfig);
+      auth = getAuth(app);
+      db = getFirestore(app);
+      provider = new GoogleAuthProvider();
+    } catch(e) {
+      console.warn("Firebase initialization warning:", e);
+    }
 
-    // App State
+    // Default Starter Links jika data masih kosong
+    const starterLinks = [
+      {
+        id: "starter_1",
+        title: "Google Drive & Dokumen",
+        url: "https://drive.google.com",
+        category: "Kerja",
+        favorite: true,
+        notes: "Akses cepat ke berkas, form, dan materi kerja.",
+        createdAt: Date.now()
+      },
+      {
+        id: "starter_2",
+        title: "Universitas Terbuka (SIA UT)",
+        url: "https://admisi-sia.ut.ac.id",
+        category: "Belajar",
+        favorite: true,
+        notes: "Portal akademik untuk kuliah dan materi ujian.",
+        createdAt: Date.now() - 1000
+      },
+      {
+        id: "starter_3",
+        title: "Pinterest - Aesthetic & Ideas",
+        url: "https://pinterest.com",
+        category: "Inspirasi",
+        favorite: false,
+        notes: "Cari moodboard, referensi desain, dan hal santai.",
+        createdAt: Date.now() - 2000
+      }
+    ];
+
     let currentUser = null;
     let links = [];
     let filterCategory = 'ALL';
     let filterFavoriteOnly = false;
     let searchQuery = '';
-    let currentView = localStorage.getItem('wnms_view') || 'grid'; // 'grid' or 'list'
+    let currentView = localStorage.getItem('wnms_view') || 'grid';
 
-    // DOM Elements
     const linksGrid = document.getElementById('linksGrid');
     const emptyState = document.getElementById('emptyState');
     const themeSelector = document.getElementById('themeSelector');
@@ -399,7 +387,6 @@
       Lainnya: { emoji: '📎', label: 'Lainnya' }
     };
 
-    // 1. Theme Setup
     function initTheme() {
       const savedTheme = localStorage.getItem('wnms_theme') || 'linen';
       document.documentElement.setAttribute('data-theme', savedTheme);
@@ -412,7 +399,6 @@
       localStorage.setItem('wnms_theme', chosen);
     });
 
-    // 2. View Mode (Grid vs List)
     function setViewMode(mode) {
       currentView = mode;
       localStorage.setItem('wnms_view', mode);
@@ -432,12 +418,16 @@
     viewGridBtn.addEventListener('click', () => setViewMode('grid'));
     viewListBtn.addEventListener('click', () => setViewMode('list'));
 
-    // 3. Local & Firestore Persistence
     function loadLocalLinks() {
       try {
-        return JSON.parse(localStorage.getItem('wnms_links') || '[]');
+        const raw = localStorage.getItem('wnms_links');
+        if (!raw) {
+          localStorage.setItem('wnms_links', JSON.stringify(starterLinks));
+          return starterLinks;
+        }
+        return JSON.parse(raw);
       } catch (e) {
-        return [];
+        return starterLinks;
       }
     }
 
@@ -446,14 +436,14 @@
     }
 
     async function syncToCloud() {
-      if (!currentUser) {
+      if (!currentUser || !db) {
         saveLocalLinks(links);
         return;
       }
       try {
         const docRef = doc(db, 'users', currentUser.uid);
         await setDoc(docRef, { links: links, updatedAt: new Date().toISOString() }, { merge: true });
-        showToast('Tersinkron di Cloud ☁️');
+        showToast('Tersimpan di Cloud ☁️');
       } catch (err) {
         console.error('Error cloud sync:', err);
         saveLocalLinks(links);
@@ -464,61 +454,65 @@
       try {
         const docRef = doc(db, 'users', uid);
         const snap = await getDoc(docRef);
-        if (snap.exists() && snap.data().links) {
+        if (snap.exists() && snap.data().links && snap.data().links.length > 0) {
           links = snap.data().links;
         } else {
-          const local = loadLocalLinks();
-          if (local.length > 0) {
-            links = local;
-            await syncToCloud();
-          }
+          links = loadLocalLinks();
+          await syncToCloud();
         }
-        renderLinks();
       } catch (err) {
+        console.error('Fetch cloud fallback:', err);
         links = loadLocalLinks();
-        renderLinks();
       }
+      renderLinks();
     }
 
-    // 4. Auth
-    btnLogin.addEventListener('click', async () => {
-      try {
-        await signInWithPopup(auth, provider);
-      } catch (e) {
-        alert('Gagal login: ' + e.message);
-      }
-    });
+    if (btnLogin && auth) {
+      btnLogin.addEventListener('click', async () => {
+        try {
+          await signInWithPopup(auth, provider);
+        } catch (e) {
+          alert('Login info: ' + e.message);
+        }
+      });
+    }
 
-    btnLogout.addEventListener('click', async () => {
-      await signOut(auth);
-      showToast('Berhasil keluar');
-    });
+    if (btnLogout && auth) {
+      btnLogout.addEventListener('click', async () => {
+        await signOut(auth);
+        showToast('Berhasil keluar');
+      });
+    }
 
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        currentUser = user;
-        btnLogin.classList.add('hidden');
-        userProfile.classList.remove('hidden');
-        userAvatar.src = user.photoURL || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.uid}`;
-        
-        syncDot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
-        syncText.innerText = `Cloud: ${user.displayName || user.email}`;
-        
-        await fetchFromCloud(user.uid);
-      } else {
-        currentUser = null;
-        btnLogin.classList.remove('hidden');
-        userProfile.classList.add('hidden');
-        
-        syncDot.className = 'w-2 h-2 rounded-full bg-amber-400';
-        syncText.innerText = 'Penyimpanan: Browser Lokal';
-        
-        links = loadLocalLinks();
-        renderLinks();
-      }
-    });
+    if (auth) {
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          currentUser = user;
+          btnLogin.classList.add('hidden');
+          userProfile.classList.remove('hidden');
+          userAvatar.src = user.photoURL || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.uid}`;
+          
+          syncDot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+          syncText.innerText = `Cloud: ${user.displayName || user.email}`;
+          
+          await fetchFromCloud(user.uid);
+        } else {
+          currentUser = null;
+          btnLogin.classList.remove('hidden');
+          userProfile.classList.add('hidden');
+          
+          syncDot.className = 'w-2 h-2 rounded-full bg-amber-400';
+          syncText.innerText = 'Penyimpanan: Browser Lokal';
+          
+          links = loadLocalLinks();
+          renderLinks();
+        }
+      });
+    } else {
+      links = loadLocalLinks();
+      renderLinks();
+    }
 
-    // 5. Render Functions (Compact Grid & List View)
     function renderLinks() {
       linksGrid.innerHTML = '';
       
@@ -548,7 +542,6 @@
           const card = document.createElement('div');
 
           if (currentView === 'list') {
-            // Tampilan Baris Ramping (List View)
             card.className = 'theme-card border rounded-xl px-3 py-2 flex items-center justify-between gap-3 hover:shadow-xs transition-all group';
             card.innerHTML = `
               <div class="flex items-center gap-2.5 min-w-0 flex-1">
@@ -588,11 +581,9 @@
               </div>
             `;
           } else {
-            // Tampilan Grid Ramping & Compact (Bento Card Rapat)
             card.className = 'theme-card border rounded-2xl p-3 flex flex-col justify-between hover:shadow-sm transition-all duration-150 group';
             card.innerHTML = `
               <div>
-                <!-- Header Card: Icon, Judul, Fav -->
                 <div class="flex items-start justify-between gap-2 mb-1.5">
                   <div class="flex items-center gap-2 min-w-0">
                     <img src="https://www.google.com/s2/favicons?domain=${hostname}&sz=32" 
@@ -605,10 +596,8 @@
                   </button>
                 </div>
 
-                <!-- Notes / Deskripsi Langsung Menempel -->
                 ${item.notes ? `<p class="text-[11px] text-stone-500 dark:text-stone-400 line-clamp-2 mb-2 leading-relaxed">${escapeHtml(item.notes)}</p>` : ''}
                 
-                <!-- Category Badge & Domain -->
                 <div class="flex items-center gap-1.5 mb-2.5">
                   <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full theme-badge flex items-center gap-0.5">
                     ${categoryConfig[item.category]?.emoji || '📎'} ${item.category}
@@ -617,7 +606,6 @@
                 </div>
               </div>
 
-              <!-- Footer Actions Rapat & Hemat Ruang -->
               <div class="pt-2 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-xs">
                 <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="font-semibold text-[11px] flex items-center gap-1 hover:underline" style="color: var(--accent);">
                   Buka <i data-lucide="external-link" class="w-3 h-3"></i>
@@ -642,7 +630,9 @@
         });
       }
 
-      lucide.createIcons();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
       attachCardListeners();
     }
 
@@ -653,7 +643,6 @@
       });
     }
 
-    // 6. Modal
     const btnOpenModal = document.getElementById('btnOpenModal');
     const btnCloseModal = document.getElementById('btnCloseModal');
     const btnCancelModal = document.getElementById('btnCancelModal');
@@ -723,13 +712,12 @@
       await syncToCloud();
     });
 
-    // 7. Card Listeners
     function attachCardListeners() {
       document.querySelectorAll('.copy-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const url = btn.getAttribute('data-url');
           if (navigator.clipboard) {
-            navigator.clipboard.writeText(url).then(() => showToast('Disalin ke clipboard! 📋'));
+            navigator.clipboard.writeText(url).then(() => showToast('Disalin! 📋'));
           } else {
             const ta = document.createElement('textarea');
             ta.value = url;
@@ -775,7 +763,6 @@
       });
     }
 
-    // 8. Search & Filters
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value;
       renderLinks();
@@ -796,7 +783,6 @@
       renderLinks();
     });
 
-    // 9. JSON Backup
     document.getElementById('btnExport').addEventListener('click', () => {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(links, null, 2));
       const a = document.createElement('a');
@@ -830,7 +816,6 @@
       reader.readAsText(file);
     });
 
-    // 10. Toast Helper
     function showToast(msg, icon = '✨') {
       const toast = document.getElementById('toast');
       const toastMsg = document.getElementById('toastMsg');
@@ -847,7 +832,7 @@
       }, 2000);
     }
 
-    // Init App
+    // Eksekusi Awal
     initTheme();
     setViewMode(currentView);
     links = loadLocalLinks();
