@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Need More Space 🪐 | Personal Link Vault</title>
   
-  <!-- Font Quicksand -->
+  <!-- Font Plus Jakarta Sans Single Family -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,7 +19,6 @@
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Quicksand"', 'sans-serif'],
           }
         }
       }
@@ -30,7 +26,6 @@
   </script>
 
   <style>
-    /* Theme Palettes - Muted & Low Eye Strain */
     :root[data-theme="linen"] {
       --bg-main: #fbf9f5;
       --bg-card: #fdfcf9;
@@ -40,10 +35,8 @@
       --text-muted: #6b7280;
       --accent: #5e7153;
       --accent-subtle: #edf3e8;
-      --accent-text: #374630;
       --badge-bg: #efece4;
     }
-
     :root[data-theme="sage"] {
       --bg-main: #f4f7f4;
       --bg-card: #ffffff;
@@ -53,10 +46,8 @@
       --text-muted: #5e6f60;
       --accent: #48694c;
       --accent-subtle: #e3ede3;
-      --accent-text: #2c442e;
       --badge-bg: #e6eee6;
     }
-
     :root[data-theme="lavender"] {
       --bg-main: #f7f6f9;
       --bg-card: #ffffff;
@@ -66,10 +57,8 @@
       --text-muted: #6b6377;
       --accent: #6c5a8a;
       --accent-subtle: #f0ebf8;
-      --accent-text: #483961;
       --badge-bg: #eeeaf5;
     }
-
     :root[data-theme="latte"] {
       --bg-main: #f9f7f4;
       --bg-card: #ffffff;
@@ -79,10 +68,8 @@
       --text-muted: #74685a;
       --accent: #7c6246;
       --accent-subtle: #f5ece2;
-      --accent-text: #4f3d29;
       --badge-bg: #efe9e0;
     }
-
     :root[data-theme="dark"] {
       --bg-main: #181b1e;
       --bg-card: #22262b;
@@ -92,26 +79,22 @@
       --text-muted: #9aa2ad;
       --accent: #86a77d;
       --accent-subtle: #273525;
-      --accent-text: #c0dbc4;
       --badge-bg: #2d333a;
     }
 
     body {
       background-color: var(--bg-main);
       color: var(--text-main);
-      transition: background-color 0.25s ease, color 0.25s ease;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
-
     .theme-card {
       background-color: var(--bg-card);
       border-color: var(--border-subtle);
     }
-
     .theme-subtle {
       background-color: var(--bg-subtle);
       border-color: var(--border-subtle);
     }
-
     .theme-accent-btn {
       background-color: var(--accent);
       color: #ffffff;
@@ -119,65 +102,49 @@
     .theme-accent-btn:hover {
       filter: brightness(0.92);
     }
-
     .theme-badge {
       background-color: var(--badge-bg);
       color: var(--text-muted);
     }
-
-    /* Scrollbar halus */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-subtle);
-      border-radius: 9999px;
-    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col font-sans transition-colors duration-200">
+<body class="min-h-screen flex flex-col font-sans">
 
-  <!-- Top Navigation & Profile Bar -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-opacity-85 border-b theme-card">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+  <!-- Header Navigation (Ukuran Lebih Proporsional & Lega) -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-opacity-90 border-b theme-card">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl flex items-center justify-center text-xl shadow-sm border border-stone-200/50" style="background-color: var(--accent-subtle);">
+      <!-- Brand Logo & Catchy Tagline -->
+      <div class="flex items-center gap-3.5 min-w-0">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center text-2xl shadow-xs border border-stone-200/60 flex-shrink-0" style="background-color: var(--accent-subtle);">
           🪐
         </div>
-        <div>
-          <h1 class="font-display font-bold text-lg sm:text-xl tracking-tight leading-tight flex items-center gap-1.5">
-            We Need More Space
-            <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: var(--badge-bg); color: var(--text-muted);">v2.0</span>
+        <div class="min-w-0">
+          <h1 class="font-extrabold text-lg sm:text-xl tracking-tight text-stone-900 dark:text-stone-100 flex items-center gap-2 leading-tight">
+            <span>We Need More Space</span>
           </h1>
-          <p class="text-[11px] sm:text-xs text-stone-500 tracking-wide font-sans">safe corner for your bookmarks & ideas 🍃</p>
+          <p class="text-xs sm:text-[13px] text-stone-500 dark:text-stone-400 font-medium tracking-tight truncate leading-normal">
+            sumiati work work work... tapi butuh space buat nyimpen link 🍃
+          </p>
         </div>
       </div>
 
-      <!-- Controls: Theme & Auth -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        
-        <!-- Theme Dropdown -->
+      <!-- Controls: Theme & Auth Button -->
+      <div class="flex items-center gap-2.5 flex-shrink-0">
         <div class="relative">
-          <select id="themeSelector" class="text-xs font-medium rounded-xl px-2.5 py-1.5 border appearance-none pr-7 cursor-pointer theme-subtle focus:outline-none focus:ring-1 focus:ring-stone-400">
-            <option value="linen">🌾 Warm Linen</option>
-            <option value="sage">🍃 Misty Sage</option>
-            <option value="lavender">🌸 Soft Lavender</option>
-            <option value="latte">☕ Cozy Latte</option>
-            <option value="dark">🌌 Midnight Slate</option>
+          <select id="themeSelector" class="text-xs sm:text-sm font-semibold rounded-xl px-3 py-2 border appearance-none pr-8 cursor-pointer theme-subtle focus:outline-none">
+            <option value="linen">🌾 Linen</option>
+            <option value="sage">🍃 Sage</option>
+            <option value="lavender">🌸 Lavender</option>
+            <option value="latte">☕ Latte</option>
+            <option value="dark">🌌 Midnight</option>
           </select>
-          <i data-lucide="palette" class="w-3.5 h-3.5 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none opacity-60"></i>
+          <i data-lucide="palette" class="w-4 h-4 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none opacity-60"></i>
         </div>
 
-        <!-- Firebase Auth UI Container -->
         <div id="authContainer" class="flex items-center">
-          <button id="btnLogin" class="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-xl border border-stone-300/80 shadow-xs hover:bg-stone-100 transition-colors bg-white text-stone-800">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24">
+          <button id="btnLogin" class="flex items-center gap-2 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl border border-stone-300 shadow-xs hover:bg-stone-50 transition-colors bg-white text-stone-800">
+            <svg class="w-4 h-4" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
               <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
@@ -186,164 +153,161 @@
             <span class="hidden sm:inline">Masuk</span>
           </button>
 
-          <!-- Logged In State (Hidden by default) -->
           <div id="userProfile" class="hidden items-center gap-2">
-            <img id="userAvatar" src="" alt="Avatar" class="w-8 h-8 rounded-full border border-stone-200 object-cover">
-            <button id="btnLogout" title="Keluar Akun" class="p-1.5 rounded-xl border theme-subtle hover:bg-red-50 hover:text-red-600 transition-colors">
+            <img id="userAvatar" src="" alt="Avatar" class="w-9 h-9 rounded-full border border-stone-200 object-cover">
+            <button id="btnLogout" title="Keluar Akun" class="p-2 rounded-xl border theme-subtle hover:text-red-500 transition-colors">
               <i data-lucide="log-out" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+  <!-- Main Body -->
+  <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-4 space-y-3.5">
 
-    <!-- Sync Alert / Status -->
-    <div id="syncBanner" class="p-3.5 rounded-2xl border text-xs sm:text-sm flex items-center justify-between gap-3 theme-card shadow-xs">
-      <div class="flex items-center gap-2.5">
+    <!-- Status Bar -->
+    <div id="syncBanner" class="py-2 px-3.5 rounded-xl border text-xs sm:text-[13px] flex items-center justify-between gap-2 theme-card">
+      <div class="flex items-center gap-2">
         <span id="syncDot" class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
-        <span id="syncText" class="font-medium text-stone-600 dark:text-stone-300">Mode Penyimpanan: Browser Lokal (Belum Login)</span>
+        <span id="syncText" class="text-stone-600 dark:text-stone-300 font-medium">Penyimpanan: Browser Lokal</span>
       </div>
       <div class="flex items-center gap-2">
-        <button id="btnExport" class="text-xs px-2.5 py-1 rounded-lg border theme-subtle hover:opacity-80 transition-opacity">Backup JSON</button>
-        <button id="btnImport" class="text-xs px-2.5 py-1 rounded-lg border theme-subtle hover:opacity-80 transition-opacity">Restore</button>
+        <button id="btnExport" class="text-xs font-semibold px-2.5 py-1 rounded-lg border theme-subtle hover:opacity-80">Backup</button>
+        <button id="btnImport" class="text-xs font-semibold px-2.5 py-1 rounded-lg border theme-subtle hover:opacity-80">Restore</button>
         <input type="file" id="fileImportInput" accept=".json" class="hidden">
       </div>
     </div>
 
-    <!-- Action Bar: Add Link Button + Search & Filters -->
-    <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
-      
-      <!-- Search Input -->
+    <!-- Toolbar -->
+    <div class="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between">
       <div class="relative flex-1">
         <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400"></i>
-        <input type="text" id="searchInput" placeholder="Cari judul, tag, atau isi tautan..." class="w-full text-xs sm:text-sm pl-10 pr-4 py-2.5 rounded-2xl border theme-card focus:outline-none focus:ring-1 focus:ring-stone-400">
+        <input type="text" id="searchInput" placeholder="Cari judul, tag, link..." class="w-full text-xs sm:text-sm pl-10 pr-3 py-2 rounded-xl border theme-card focus:outline-none">
       </div>
 
-      <!-- Action Tools -->
-      <div class="flex items-center gap-2">
-        <!-- Filter Category -->
-        <select id="categoryFilter" class="text-xs sm:text-sm py-2.5 px-3 rounded-2xl border theme-card focus:outline-none cursor-pointer">
-          <option value="ALL">Semua Kategori 📂</option>
-          <option value="Kerja">💼 Kerja / Kantor</option>
-          <option value="Belajar">📚 Kuliah & Riset</option>
-          <option value="Bacaan">📖 Bacaan Santai</option>
-          <option value="Belanja">🛍️ Wishlist & Belanja</option>
-          <option value="Inspirasi">✨ Ide & Inspirasi</option>
-          <option value="Lainnya">📎 Catatan Acak</option>
+      <div class="flex items-center gap-2 flex-wrap">
+        <select id="categoryFilter" class="text-xs sm:text-sm font-medium py-2 px-3 rounded-xl border theme-card focus:outline-none cursor-pointer">
+          <option value="ALL">Semua 📂</option>
+          <option value="Kerja">💼 Kerja</option>
+          <option value="Belajar">📚 Belajar</option>
+          <option value="Bacaan">📖 Bacaan</option>
+          <option value="Belanja">🛍️ Belanja</option>
+          <option value="Inspirasi">✨ Ide</option>
+          <option value="Lainnya">📎 Lainnya</option>
         </select>
 
-        <!-- Toggle Favorites -->
-        <button id="filterFavBtn" class="flex items-center gap-1.5 px-3 py-2.5 text-xs sm:text-sm rounded-2xl border theme-card hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <button id="filterFavBtn" title="Hanya Favorit" class="p-2 text-xs rounded-xl border theme-card hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
           <i data-lucide="star" class="w-4 h-4 text-amber-500"></i>
-          <span class="hidden sm:inline">Favorit</span>
         </button>
 
-        <!-- Add Link Button -->
-        <button id="btnOpenModal" class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-2xl shadow-xs theme-accent-btn transition-transform active:scale-95">
+        <div class="flex items-center rounded-xl border theme-card p-0.5">
+          <button id="viewGridBtn" title="Tampilan Kotak (Grid)" class="p-2 rounded-lg transition-colors bg-stone-200/70 dark:bg-stone-700 text-stone-800 dark:text-stone-100">
+            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+          </button>
+          <button id="viewListBtn" title="Tampilan Baris (List)" class="p-2 rounded-lg transition-colors text-stone-400 hover:text-stone-700">
+            <i data-lucide="list" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <button id="btnOpenModal" class="flex items-center gap-1.5 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl shadow-xs theme-accent-btn transition-transform active:scale-95 ml-auto sm:ml-0">
           <i data-lucide="plus" class="w-4 h-4"></i>
           <span>Simpan Link</span>
         </button>
       </div>
-
     </div>
 
-    <!-- Empty State Container -->
-    <div id="emptyState" class="hidden text-center py-16 px-4">
-      <div class="w-16 h-16 mx-auto mb-3 rounded-3xl flex items-center justify-center text-3xl theme-subtle">
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-10 px-4">
+      <div class="w-12 h-12 mx-auto mb-2 rounded-2xl flex items-center justify-center text-2xl theme-subtle">
         📭
       </div>
-      <h3 class="font-display font-bold text-base text-stone-700 dark:text-stone-200">Belum ada link di ruang ini</h3>
-      <p class="text-xs text-stone-500 mt-1 max-w-xs mx-auto">Klik tombol <strong>"Simpan Link"</strong> untuk menaruh bookmark favoritmu!</p>
+      <h3 class="font-bold text-sm text-stone-700 dark:text-stone-200">Belum ada link di sini</h3>
+      <p class="text-xs text-stone-500 mt-0.5">Klik tombol <strong>"Simpan Link"</strong> untuk menaruh bookmark baru!</p>
     </div>
 
-    <!-- Links Grid -->
-    <div id="linksGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <!-- Cards will be populated here via JS -->
+    <!-- Links Container -->
+    <div id="linksGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
     </div>
 
   </main>
 
-  <!-- Modal: Tambah / Edit Link -->
+  <!-- Modal Form -->
   <div id="linkModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs hidden items-center justify-center p-4">
-    <div class="w-full max-w-md rounded-3xl p-6 theme-card border shadow-xl relative animate-in fade-in zoom-in-95 duration-150">
+    <div class="w-full max-w-sm rounded-2xl p-5 theme-card border shadow-xl relative animate-in fade-in zoom-in-95 duration-150">
       
-      <div class="flex items-center justify-between pb-3 border-b border-stone-200/60 dark:border-stone-700">
-        <h3 id="modalTitle" class="font-display font-bold text-base flex items-center gap-2">
+      <div class="flex items-center justify-between pb-2.5 border-b border-stone-200/60 dark:border-stone-700">
+        <h3 id="modalTitle" class="font-bold text-sm sm:text-base flex items-center gap-1.5">
           <span>✨</span> Simpan Link Baru
         </h3>
-        <button id="btnCloseModal" class="p-1.5 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+        <button id="btnCloseModal" class="p-1 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
 
-      <form id="linkForm" class="mt-4 space-y-3.5 text-xs sm:text-sm">
+      <form id="linkForm" class="mt-3 space-y-2.5 text-xs sm:text-sm">
         <input type="hidden" id="editLinkId">
 
         <div>
-          <label class="block font-medium mb-1 text-stone-600 dark:text-stone-300">URL / Tautan Website <span class="text-red-500">*</span></label>
-          <input type="url" id="inputUrl" required placeholder="https://example.com" class="w-full px-3.5 py-2 rounded-xl border theme-subtle focus:outline-none focus:ring-1 focus:ring-stone-400">
+          <label class="block font-semibold mb-1 text-stone-600 dark:text-stone-300">URL Website <span class="text-red-500">*</span></label>
+          <input type="url" id="inputUrl" required placeholder="https://example.com" class="w-full px-3 py-2 rounded-lg border theme-subtle focus:outline-none">
         </div>
 
         <div>
-          <label class="block font-medium mb-1 text-stone-600 dark:text-stone-300">Judul / Nama <span class="text-red-500">*</span></label>
-          <input type="text" id="inputTitle" required placeholder="Contoh: Dokumen Kerja atau Catatan Resep" class="w-full px-3.5 py-2 rounded-xl border theme-subtle focus:outline-none focus:ring-1 focus:ring-stone-400">
+          <label class="block font-semibold mb-1 text-stone-600 dark:text-stone-300">Judul / Nama <span class="text-red-500">*</span></label>
+          <input type="text" id="inputTitle" required placeholder="Nama website / catatan" class="w-full px-3 py-2 rounded-lg border theme-subtle focus:outline-none">
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-2">
           <div>
-            <label class="block font-medium mb-1 text-stone-600 dark:text-stone-300">Kategori</label>
-            <select id="inputCategory" class="w-full px-3 py-2 rounded-xl border theme-subtle focus:outline-none cursor-pointer">
+            <label class="block font-semibold mb-1 text-stone-600 dark:text-stone-300">Kategori</label>
+            <select id="inputCategory" class="w-full px-2.5 py-2 rounded-lg border theme-subtle focus:outline-none cursor-pointer">
               <option value="Kerja">💼 Kerja</option>
               <option value="Belajar">📚 Belajar</option>
               <option value="Bacaan">📖 Bacaan</option>
               <option value="Belanja">🛍️ Belanja</option>
-              <option value="Inspirasi">✨ Inspirasi</option>
+              <option value="Inspirasi">✨ Ide</option>
               <option value="Lainnya">📎 Lainnya</option>
             </select>
           </div>
           <div>
-            <label class="block font-medium mb-1 text-stone-600 dark:text-stone-300">Tandai Favorit?</label>
+            <label class="block font-semibold mb-1 text-stone-600 dark:text-stone-300">Favorit?</label>
             <div class="flex items-center h-9">
-              <label class="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" id="inputFavorite" class="w-4 h-4 rounded text-amber-500 focus:ring-amber-400">
-                <span class="text-xs">Bintang ⭐</span>
+              <label class="flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="inputFavorite" class="w-4 h-4 rounded text-amber-500 focus:ring-0">
+                <span class="text-xs font-medium">Bintang ⭐</span>
               </label>
             </div>
           </div>
         </div>
 
         <div>
-          <label class="block font-medium mb-1 text-stone-600 dark:text-stone-300">Catatan Singkat (Opsional)</label>
-          <textarea id="inputNotes" rows="2" placeholder="Catatan kecil kenapa link ini disimpan..." class="w-full px-3.5 py-2 rounded-xl border theme-subtle focus:outline-none focus:ring-1 focus:ring-stone-400 resize-none"></textarea>
+          <label class="block font-semibold mb-1 text-stone-600 dark:text-stone-300">Catatan Singkat (Opsional)</label>
+          <textarea id="inputNotes" rows="2" placeholder="Catatan kecil..." class="w-full px-3 py-2 rounded-lg border theme-subtle focus:outline-none resize-none"></textarea>
         </div>
 
-        <div class="pt-3 flex gap-2">
-          <button type="button" id="btnCancelModal" class="flex-1 py-2.5 rounded-xl border theme-subtle font-medium">Batal</button>
-          <button type="submit" class="flex-1 py-2.5 rounded-xl font-medium shadow-xs theme-accent-btn">Simpan ke Vault</button>
+        <div class="pt-2 flex gap-2">
+          <button type="button" id="btnCancelModal" class="flex-1 py-2 rounded-xl border theme-subtle font-semibold">Batal</button>
+          <button type="submit" class="flex-1 py-2 rounded-xl font-bold shadow-xs theme-accent-btn">Simpan</button>
         </div>
       </form>
 
     </div>
   </div>
 
-  <!-- Toast Notification -->
-  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-200 pointer-events-none px-4 py-2.5 rounded-2xl theme-card border shadow-lg text-xs font-semibold flex items-center gap-2">
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-4 right-4 z-50 transform translate-y-16 opacity-0 transition-all duration-200 pointer-events-none px-3.5 py-2 rounded-xl theme-card border shadow-md text-xs font-semibold flex items-center gap-1.5">
     <span id="toastIcon">✨</span>
     <span id="toastMsg">Berhasil!</span>
   </div>
 
-  <!-- Firebase Modular Scripts -->
+  <!-- Scripts -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
     import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-    // Kunci Konfigurasi Firebase Proyek we-need-space Anda
     const firebaseConfig = {
       apiKey: "AIzaSyCDXzDZAijlJ47lxU1hYgYU-x_Bhsd5Bbg",
       authDomain: "we-need-space.firebaseapp.com",
@@ -353,19 +317,53 @@
       appId: "1:645398768628:web:080b1dc382411f8ca2a7a1"
     };
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const provider = new GoogleAuthProvider();
+    let app, auth, db, provider;
+    try {
+      app = initializeApp(firebaseConfig);
+      auth = getAuth(app);
+      db = getFirestore(app);
+      provider = new GoogleAuthProvider();
+    } catch(e) {
+      console.warn("Firebase warning:", e);
+    }
 
-    // App State
+    const starterLinks = [
+      {
+        id: "starter_1",
+        title: "Google Drive & Dokumen",
+        url: "https://drive.google.com",
+        category: "Kerja",
+        favorite: true,
+        notes: "Akses cepat berkas, rekapan, dan materi kerja.",
+        createdAt: Date.now()
+      },
+      {
+        id: "starter_2",
+        title: "SIA Universitas Terbuka",
+        url: "https://admisi-sia.ut.ac.id",
+        category: "Belajar",
+        favorite: true,
+        notes: "Portal akademik perkuliahan dan tugas UT.",
+        createdAt: Date.now() - 1000
+      },
+      {
+        id: "starter_3",
+        title: "Pinterest Moodboard",
+        url: "https://pinterest.com",
+        category: "Inspirasi",
+        favorite: false,
+        notes: "Koleksi ide santai, resep, dan estetika warna.",
+        createdAt: Date.now() - 2000
+      }
+    ];
+
     let currentUser = null;
     let links = [];
     let filterCategory = 'ALL';
     let filterFavoriteOnly = false;
     let searchQuery = '';
+    let currentView = localStorage.getItem('wnms_view') || 'grid';
 
-    // Elements
     const linksGrid = document.getElementById('linksGrid');
     const emptyState = document.getElementById('emptyState');
     const themeSelector = document.getElementById('themeSelector');
@@ -374,6 +372,8 @@
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
     const filterFavBtn = document.getElementById('filterFavBtn');
+    const viewGridBtn = document.getElementById('viewGridBtn');
+    const viewListBtn = document.getElementById('viewListBtn');
     const syncDot = document.getElementById('syncDot');
     const syncText = document.getElementById('syncText');
     const btnLogin = document.getElementById('btnLogin');
@@ -381,17 +381,15 @@
     const userProfile = document.getElementById('userProfile');
     const userAvatar = document.getElementById('userAvatar');
 
-    // Category Badges & Emojis
     const categoryConfig = {
       Kerja: { emoji: '💼', label: 'Kerja' },
       Belajar: { emoji: '📚', label: 'Belajar' },
       Bacaan: { emoji: '📖', label: 'Bacaan' },
       Belanja: { emoji: '🛍️', label: 'Belanja' },
-      Inspirasi: { emoji: '✨', label: 'Inspirasi' },
+      Inspirasi: { emoji: '✨', label: 'Ide' },
       Lainnya: { emoji: '📎', label: 'Lainnya' }
     };
 
-    // 1. Theme Management
     function initTheme() {
       const savedTheme = localStorage.getItem('wnms_theme') || 'linen';
       document.documentElement.setAttribute('data-theme', savedTheme);
@@ -404,12 +402,35 @@
       localStorage.setItem('wnms_theme', chosen);
     });
 
-    // 2. Data Persistence (Local & Firestore)
+    function setViewMode(mode) {
+      currentView = mode;
+      localStorage.setItem('wnms_view', mode);
+
+      if (mode === 'list') {
+        linksGrid.className = 'flex flex-col gap-1.5';
+        viewListBtn.className = 'p-2 rounded-lg transition-colors bg-stone-200/70 dark:bg-stone-700 text-stone-800 dark:text-stone-100';
+        viewGridBtn.className = 'p-2 rounded-lg transition-colors text-stone-400 hover:text-stone-700';
+      } else {
+        linksGrid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5';
+        viewGridBtn.className = 'p-2 rounded-lg transition-colors bg-stone-200/70 dark:bg-stone-700 text-stone-800 dark:text-stone-100';
+        viewListBtn.className = 'p-2 rounded-lg transition-colors text-stone-400 hover:text-stone-700';
+      }
+      renderLinks();
+    }
+
+    viewGridBtn.addEventListener('click', () => setViewMode('grid'));
+    viewListBtn.addEventListener('click', () => setViewMode('list'));
+
     function loadLocalLinks() {
       try {
-        return JSON.parse(localStorage.getItem('wnms_links') || '[]');
+        const raw = localStorage.getItem('wnms_links');
+        if (!raw) {
+          localStorage.setItem('wnms_links', JSON.stringify(starterLinks));
+          return starterLinks;
+        }
+        return JSON.parse(raw);
       } catch (e) {
-        return [];
+        return starterLinks;
       }
     }
 
@@ -418,7 +439,7 @@
     }
 
     async function syncToCloud() {
-      if (!currentUser) {
+      if (!currentUser || !db) {
         saveLocalLinks(links);
         return;
       }
@@ -427,8 +448,7 @@
         await setDoc(docRef, { links: links, updatedAt: new Date().toISOString() }, { merge: true });
         showToast('Tersimpan di Cloud ☁️');
       } catch (err) {
-        console.error('Gagal sinkron cloud:', err);
-        showToast('Gagal simpan ke cloud, dicadangkan ke lokal ⚠️');
+        console.error('Error sync:', err);
         saveLocalLinks(links);
       }
     }
@@ -437,63 +457,64 @@
       try {
         const docRef = doc(db, 'users', uid);
         const snap = await getDoc(docRef);
-        if (snap.exists() && snap.data().links) {
+        if (snap.exists() && snap.data().links && snap.data().links.length > 0) {
           links = snap.data().links;
         } else {
-          // Jika di cloud masih kosong, cadangkan data lokal ke cloud
-          const local = loadLocalLinks();
-          if (local.length > 0) {
-            links = local;
-            await syncToCloud();
-          }
+          links = loadLocalLinks();
+          await syncToCloud();
         }
-        renderLinks();
       } catch (err) {
-        console.error('Fetch error:', err);
         links = loadLocalLinks();
-        renderLinks();
       }
+      renderLinks();
     }
 
-    // 3. Auth Handlers
-    btnLogin.addEventListener('click', async () => {
-      try {
-        await signInWithPopup(auth, provider);
-      } catch (e) {
-        alert('Gagal login Google: ' + e.message);
-      }
-    });
+    if (btnLogin && auth) {
+      btnLogin.addEventListener('click', async () => {
+        try {
+          await signInWithPopup(auth, provider);
+        } catch (e) {
+          alert('Login info: ' + e.message);
+        }
+      });
+    }
 
-    btnLogout.addEventListener('click', async () => {
-      await signOut(auth);
-      showToast('Berhasil keluar akun');
-    });
+    if (btnLogout && auth) {
+      btnLogout.addEventListener('click', async () => {
+        await signOut(auth);
+        showToast('Berhasil keluar');
+      });
+    }
 
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        currentUser = user;
-        btnLogin.classList.add('hidden');
-        userProfile.classList.remove('hidden');
-        userAvatar.src = user.photoURL || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.uid}`;
-        
-        syncDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse';
-        syncText.innerText = `Terhubung ke Cloud (${user.displayName || user.email})`;
-        
-        await fetchFromCloud(user.uid);
-      } else {
-        currentUser = null;
-        btnLogin.classList.remove('hidden');
-        userProfile.classList.add('hidden');
-        
-        syncDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
-        syncText.innerText = 'Mode Penyimpanan: Browser Lokal (Belum Login)';
-        
-        links = loadLocalLinks();
-        renderLinks();
-      }
-    });
+    if (auth) {
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          currentUser = user;
+          btnLogin.classList.add('hidden');
+          userProfile.classList.remove('hidden');
+          userAvatar.src = user.photoURL || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.uid}`;
+          
+          syncDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse';
+          syncText.innerText = `Cloud: ${user.displayName || user.email}`;
+          
+          await fetchFromCloud(user.uid);
+        } else {
+          currentUser = null;
+          btnLogin.classList.remove('hidden');
+          userProfile.classList.add('hidden');
+          
+          syncDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+          syncText.innerText = 'Penyimpanan: Browser Lokal';
+          
+          links = loadLocalLinks();
+          renderLinks();
+        }
+      });
+    } else {
+      links = loadLocalLinks();
+      renderLinks();
+    }
 
-    // 4. Render Engine
     function renderLinks() {
       linksGrid.innerHTML = '';
       
@@ -515,62 +536,105 @@
         filtered.forEach(item => {
           let hostname = '';
           try {
-            hostname = new URL(item.url).hostname;
+            hostname = new URL(item.url).hostname.replace('www.', '');
           } catch(e) {
             hostname = item.url;
           }
 
           const card = document.createElement('div');
-          card.className = 'theme-card border rounded-3xl p-4 sm:p-5 flex flex-col justify-between hover:shadow-md transition-all duration-200 group relative';
 
-          card.innerHTML = `
-            <div>
-              <div class="flex items-start justify-between gap-3 mb-2.5">
-                <div class="flex items-center gap-2.5 min-w-0">
-                  <img src="https://www.google.com/s2/favicons?domain=${hostname}&sz=32" 
-                       onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22/></svg>'" 
-                       class="w-6 h-6 rounded-lg p-0.5 border border-stone-200/80 bg-white object-contain flex-shrink-0" alt="Favicon">
-                  <h4 class="font-display font-bold text-sm sm:text-base leading-snug truncate">${escapeHtml(item.title)}</h4>
+          if (currentView === 'list') {
+            card.className = 'theme-card border rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-3 hover:shadow-xs transition-all group';
+            card.innerHTML = `
+              <div class="flex items-center gap-3 min-w-0 flex-1">
+                <img src="https://www.google.com/s2/favicons?domain=${hostname}&sz=32" 
+                     onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22/></svg>'" 
+                     class="w-5 h-5 rounded p-0.5 border border-stone-200/80 bg-white object-contain flex-shrink-0" alt="Favicon">
+                
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center gap-2">
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="font-bold text-xs sm:text-sm hover:underline truncate hover:text-emerald-700 dark:hover:text-emerald-400">
+                      ${escapeHtml(item.title)}
+                    </a>
+                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md theme-badge flex-shrink-0">
+                      ${categoryConfig[item.category]?.emoji || '📎'} ${item.category}
+                    </span>
+                  </div>
+                  ${item.notes ? `<p class="text-xs text-stone-500 dark:text-stone-400 truncate mt-0.5">${escapeHtml(item.notes)}</p>` : ''}
                 </div>
-                <button class="toggle-fav-btn p-1 text-stone-400 hover:text-amber-500 transition-colors" data-id="${item.id}">
+              </div>
+
+              <div class="flex items-center gap-1.5 flex-shrink-0">
+                <button class="toggle-fav-btn p-1 text-stone-400 hover:text-amber-500" data-id="${item.id}" title="Favorit">
                   <i data-lucide="star" class="w-4 h-4 ${item.favorite ? 'fill-amber-400 text-amber-500' : ''}"></i>
                 </button>
-              </div>
-
-              ${item.notes ? `<p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-3 font-normal">${escapeHtml(item.notes)}</p>` : ''}
-              
-              <div class="flex items-center gap-2 mb-4">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full theme-badge flex items-center gap-1">
-                  ${categoryConfig[item.category]?.emoji || '📎'} ${item.category}
-                </span>
-                <span class="text-[11px] text-stone-400 truncate max-w-[140px]">${hostname}</span>
-              </div>
-            </div>
-
-            <div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs">
-              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="font-semibold text-xs flex items-center gap-1 hover:underline" style="color: var(--accent);">
-                Buka Link <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-
-              <div class="flex items-center gap-1 opacity-90 group-hover:opacity-100">
-                <button class="copy-btn p-1.5 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-500" data-url="${item.url}" title="Salin URL">
-                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="p-1 text-stone-500 hover:text-stone-800" title="Buka">
+                  <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+                <button class="copy-btn p-1 text-stone-400 hover:text-stone-700" data-url="${item.url}" title="Salin URL">
+                  <i data-lucide="copy" class="w-4 h-4"></i>
                 </button>
-                <button class="edit-btn p-1.5 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-500" data-id="${item.id}" title="Edit Link">
-                  <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+                <button class="edit-btn p-1 text-stone-400 hover:text-stone-700" data-id="${item.id}" title="Edit">
+                  <i data-lucide="edit-3" class="w-4 h-4"></i>
                 </button>
-                <button class="delete-btn p-1.5 rounded-lg hover:bg-red-50 hover:text-red-600 text-stone-400 transition-colors" data-id="${item.id}" title="Hapus">
-                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                <button class="delete-btn p-1 text-stone-400 hover:text-red-500" data-id="${item.id}" title="Hapus">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
                 </button>
               </div>
-            </div>
-          `;
+            `;
+          } else {
+            card.className = 'theme-card border rounded-2xl p-3.5 flex flex-col justify-between hover:shadow-sm transition-all duration-150 group';
+            card.innerHTML = `
+              <div>
+                <div class="flex items-start justify-between gap-2.5 mb-2">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <img src="https://www.google.com/s2/favicons?domain=${hostname}&sz=32" 
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22/></svg>'" 
+                         class="w-5 h-5 rounded-md p-0.5 border border-stone-200/80 bg-white object-contain flex-shrink-0" alt="Favicon">
+                    <h4 class="font-bold text-xs sm:text-sm leading-snug truncate">${escapeHtml(item.title)}</h4>
+                  </div>
+                  <button class="toggle-fav-btn p-0.5 text-stone-400 hover:text-amber-500 transition-colors flex-shrink-0" data-id="${item.id}">
+                    <i data-lucide="star" class="w-4 h-4 ${item.favorite ? 'fill-amber-400 text-amber-500' : ''}"></i>
+                  </button>
+                </div>
+
+                ${item.notes ? `<p class="text-xs text-stone-500 dark:text-stone-400 line-clamp-2 mb-2 leading-relaxed">${escapeHtml(item.notes)}</p>` : ''}
+                
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full theme-badge flex items-center gap-1">
+                    ${categoryConfig[item.category]?.emoji || '📎'} ${item.category}
+                  </span>
+                  <span class="text-[10px] text-stone-400 truncate max-w-[130px]">${hostname}</span>
+                </div>
+              </div>
+
+              <div class="pt-2 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-xs">
+                <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="font-bold text-xs flex items-center gap-1 hover:underline" style="color: var(--accent);">
+                  Buka Link <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+
+                <div class="flex items-center gap-1">
+                  <button class="copy-btn p-1 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-400 hover:text-stone-600" data-url="${item.url}" title="Salin">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  </button>
+                  <button class="edit-btn p-1 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-400 hover:text-stone-600" data-id="${item.id}" title="Edit">
+                    <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+                  </button>
+                  <button class="delete-btn p-1 rounded-md hover:bg-red-50 hover:text-red-600 text-stone-400" data-id="${item.id}" title="Hapus">
+                    <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          }
 
           linksGrid.appendChild(card);
         });
       }
 
-      lucide.createIcons();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
       attachCardListeners();
     }
 
@@ -581,7 +645,6 @@
       });
     }
 
-    // 5. Modal Operations
     const btnOpenModal = document.getElementById('btnOpenModal');
     const btnCloseModal = document.getElementById('btnCloseModal');
     const btnCancelModal = document.getElementById('btnCancelModal');
@@ -627,14 +690,12 @@
       const notes = document.getElementById('inputNotes').value.trim();
 
       if (id) {
-        // Edit existing
         const index = links.findIndex(l => l.id === id);
         if (index !== -1) {
           links[index] = { ...links[index], url, title, category, favorite, notes, updatedAt: Date.now() };
           showToast('Tautan diperbarui! ✏️');
         }
       } else {
-        // New item
         const newItem = {
           id: 'link_' + Date.now(),
           url,
@@ -653,14 +714,12 @@
       await syncToCloud();
     });
 
-    // 6. Action Buttons Inside Cards
     function attachCardListeners() {
-      // Copy URL
       document.querySelectorAll('.copy-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', () => {
           const url = btn.getAttribute('data-url');
           if (navigator.clipboard) {
-            navigator.clipboard.writeText(url).then(() => showToast('Tautan disalin ke clipboard! 📋'));
+            navigator.clipboard.writeText(url).then(() => showToast('Disalin! 📋'));
           } else {
             const ta = document.createElement('textarea');
             ta.value = url;
@@ -668,12 +727,11 @@
             ta.select();
             document.execCommand('copy');
             document.body.removeChild(ta);
-            showToast('Tautan disalin! 📋');
+            showToast('Disalin! 📋');
           }
         });
       });
 
-      // Toggle Fav
       document.querySelectorAll('.toggle-fav-btn').forEach(btn => {
         btn.addEventListener('click', async () => {
           const id = btn.getAttribute('data-id');
@@ -686,7 +744,6 @@
         });
       });
 
-      // Edit
       document.querySelectorAll('.edit-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const id = btn.getAttribute('data-id');
@@ -695,21 +752,19 @@
         });
       });
 
-      // Delete
       document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', async () => {
           const id = btn.getAttribute('data-id');
-          if (confirm('Yakin ingin menghapus bookmark tautan ini?')) {
+          if (confirm('Hapus link ini?')) {
             links = links.filter(l => l.id !== id);
             renderLinks();
             await syncToCloud();
-            showToast('Tautan dihapus 🗑️');
+            showToast('Dihapus 🗑️');
           }
         });
       });
     }
 
-    // 7. Search & Filters
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value;
       renderLinks();
@@ -730,16 +785,15 @@
       renderLinks();
     });
 
-    // 8. JSON Export / Import
     document.getElementById('btnExport').addEventListener('click', () => {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(links, null, 2));
-      const downloadAnchor = document.createElement('a');
-      downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `we-need-more-space-backup-${new Date().toISOString().slice(0,10)}.json`);
-      document.body.appendChild(downloadAnchor);
-      downloadAnchor.click();
-      downloadAnchor.remove();
-      showToast('Cadangan berhasil diunduh! 📦');
+      const a = document.createElement('a');
+      a.setAttribute("href", dataStr);
+      a.setAttribute("download", `we-need-more-space-${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      showToast('Cadangan diunduh 📦');
     });
 
     const fileImportInput = document.getElementById('fileImportInput');
@@ -755,18 +809,15 @@
             links = imported;
             renderLinks();
             await syncToCloud();
-            showToast('Data berhasil dipulihkan! 🎉');
-          } else {
-            alert('Format file JSON tidak sesuai.');
+            showToast('Data dipulihkan 🎉');
           }
         } catch (err) {
-          alert('Gagal membaca file JSON.');
+          alert('Format JSON keliru.');
         }
       };
       reader.readAsText(file);
     });
 
-    // 9. Toast Notification Helper
     function showToast(msg, icon = '✨') {
       const toast = document.getElementById('toast');
       const toastMsg = document.getElementById('toastMsg');
@@ -774,17 +825,17 @@
       
       toastMsg.innerText = msg;
       toastIcon.innerText = icon;
-      toast.classList.remove('opacity-0', 'translate-y-20');
+      toast.classList.remove('opacity-0', 'translate-y-16');
       toast.classList.add('opacity-100', 'translate-y-0');
 
       setTimeout(() => {
         toast.classList.remove('opacity-100', 'translate-y-0');
-        toast.classList.add('opacity-0', 'translate-y-20');
-      }, 2500);
+        toast.classList.add('opacity-0', 'translate-y-16');
+      }, 2000);
     }
 
-    // Initial Executions
     initTheme();
+    setViewMode(currentView);
     links = loadLocalLinks();
     renderLinks();
   </script>
